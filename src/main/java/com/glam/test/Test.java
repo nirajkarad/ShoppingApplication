@@ -14,7 +14,7 @@ import com.google.inject.Injector;
 
 public class Test {
 	
-private static java.util.logging.Logger logger= Logger.getLogger(Test.class); 
+private static Logger logger= Logger.getLogger(Test.class); 
 		
 	public static void main(String[] args) throws IOException {
 		PropertyConfigurator.configure("log4j.properties");
