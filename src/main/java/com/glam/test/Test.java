@@ -14,11 +14,12 @@ import com.google.inject.Injector;
 
 public class Test {
 	
-private static Logger logger= Logger.getLogger(Test.class); 
+private static java.util.logging.Logger logger= Logger.getLogger(Test.class); 
 		
 	public static void main(String[] args) throws IOException {
 		PropertyConfigurator.configure("log4j.properties");
 				
+		logger.info("-- Starting --");
 		//Start: 1st Customer
 		Customer c1 = new Customer("Raj", "4", "21", "Pune");
 		Vector<Item> itm1 = new Vector<Item>();
