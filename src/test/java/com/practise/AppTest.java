@@ -1,5 +1,6 @@
 package com.practise;
 
+import static org.junit.Assert.assertEquals;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -31,8 +32,10 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
+    
     public void testApp()
     {
-        assertTrue( true );
+		MyClass tester = new MyClass();
+	    assertEquals("10 x 5 must be 50", 50, tester.multiply(10, 5));
     }
 }
