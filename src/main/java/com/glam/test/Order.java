@@ -2,7 +2,8 @@ package com.glam.test;
 
 
 import java.util.Iterator;
-import java.util.Vector;
+import java.util.List;
+
 
 import org.apache.log4j.Logger;
 
@@ -12,7 +13,7 @@ import com.google.inject.Inject;
 public class Order implements Gateway{
 
 	 private Customer cust;
-	 private Vector<Item> cart;
+	 private List<Item> cart;
 	 
 	 private final CustomerDB cdb;
 	 private final DBConfig db;
@@ -94,7 +95,7 @@ public class Order implements Gateway{
 	 }
 	 
 	@Override
-	public boolean makePayment(String id,Vector<Item> i,String type) {
+	public boolean makePayment(String id,List<Item> i,String type) {
 		this.paymentMode=type;
 		this.cust= cdb.retrieve(id);
 		this.cart=i;

@@ -3,7 +3,8 @@ package com.glam.test;
 
 
 import java.io.IOException;
-import java.util.Vector;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -22,7 +23,8 @@ private static Logger logger= Logger.getLogger(Test.class);
 		logger.info("-- Starting --");
 		//Start: 1st Customer
 		Customer c1 = new Customer("Raj", "4", "21", "Pune");
-		Vector<Item> itm1 = new Vector<Item>();
+		//Vector<Item> itm1 = new Vector<Item>();
+		List<Item> itm1 = new LinkedList<Item>();
 		Item i1 = new Item("1", "Tshirt", "Nike Brand", 599);
 		Item i2 = new Item("2", "Shoes", "Puma Brand", 499);
 		Item i3 = new Item("3", "Jacket", "Woodsland Brand", 699);
@@ -35,7 +37,8 @@ private static Logger logger= Logger.getLogger(Test.class);
 		
 		//Start: 2nd Customer
 		Customer c2 = new Customer("Ravi", "4", "21", "Pune");
-		Vector<Item> itm2 = new Vector<Item>();
+		//Vector<Item> itm2 = new Vector<Item>();
+		List<Item> itm2 = new LinkedList<Item>();
 		Item i11 = new Item("1", "Tshirt", "Nike Brand", 999);
 		Item i22 = new Item("2", "Shoes", "Puma Brand", 1599);
 		Item i33 = new Item("3", "Jacket", "Woodsland Brand", 1799);
