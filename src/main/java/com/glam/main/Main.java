@@ -9,6 +9,11 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
+import com.glam.billing.Gateway;
+import com.glam.customer.Customer;
+import com.glam.customer.CustomerDB;
+import com.glam.item.Item;
+import com.glam.modules.TestModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
@@ -23,7 +28,6 @@ private static Logger logger= Logger.getLogger(Main.class);
 		logger.info("-- Starting --");
 		//Start: 1st Customer
 		Customer c1 = new Customer("Raj", "4", "21", "Pune");
-		//Vector<Item> itm1 = new Vector<Item>();
 		List<Item> itm1 = new LinkedList<Item>();
 		Item i1 = new Item("1", "Tshirt", "Nike Brand", 599);
 		Item i2 = new Item("2", "Shoes", "Puma Brand", 499);
@@ -37,7 +41,6 @@ private static Logger logger= Logger.getLogger(Main.class);
 		
 		//Start: 2nd Customer
 		Customer c2 = new Customer("Ravi", "4", "21", "Pune");
-		//Vector<Item> itm2 = new Vector<Item>();
 		List<Item> itm2 = new LinkedList<Item>();
 		Item i11 = new Item("1", "Tshirt", "Nike Brand", 999);
 		Item i22 = new Item("2", "Shoes", "Puma Brand", 1599);

@@ -7,6 +7,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import com.glam.customer.Customer;
+import com.glam.customer.CustomerDB;
+import com.glam.item.Item;
 import com.google.inject.Inject;
 
 //Order class responsible for making payment & billing

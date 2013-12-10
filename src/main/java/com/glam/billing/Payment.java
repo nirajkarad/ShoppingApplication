@@ -4,15 +4,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Properties;
-
 import org.apache.log4j.Logger;
 import org.skife.config.ConfigurationObjectFactory;
-
 import com.google.inject.Provider;
 
 public class Payment implements Provider<DBConfig> {
 	
-	private static Logger logger= Logger.getLogger(Main.class);
+	private static Logger logger= Logger.getLogger(Payment.class);
 	
 
 	@Override
