@@ -50,10 +50,7 @@ private static Logger logger= Logger.getLogger(Main.class);
 		itm2.add(i22);
 		itm2.add(i33);
 		itm2.add(i44);
-		//End: 1st Customer
-
-		
-		
+		//End: 2nd Customer
 		
 		Injector inj = Guice.createInjector(new TestModule());
 		CustomerDB c_db = inj.getInstance(CustomerDB.class);
@@ -62,12 +59,12 @@ private static Logger logger= Logger.getLogger(Main.class);
 		//For 1st Customer
 		c_db.save(c1.getCust_id(), c1);
 		gw.makePayment(c1.getCust_id(),itm1,"debit");
-		gw.makeBill();
+		float amount1 = gw.makeBill();
 		
 		//For 2nd Customer
 		c_db.save(c2.getCust_id(), c2);
 		gw.makePayment(c2.getCust_id(),itm2,"visa");
-		gw.makeBill();
+		float amount2 = gw.makeBill();
 		
 		logger.info("--Ending--");
 	}

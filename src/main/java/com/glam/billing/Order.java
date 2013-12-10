@@ -75,18 +75,21 @@ public class Order implements Gateway{
 		 }
 		 else
 		 logger.info("\nProceeding for Final Billing...");
+		 
 		 billAmount=sum;
 		 }
 	 
 	 public void updateCustLevel()
 	 {
 		 if(billAmount>10000){
+			 billAmount = billAmount - 1500; offOnOrder=1500;
+			 System.out.println("\n *Getting Rs 1500/- Off");
 			 System.out.println("Please Collect Your Gift from Gift Counter....");
 		 }
 	 }
 	 
 	 @Override
-	 public void makeBill()
+	 public float makeBill()
 	 {
 		 OrderID++;
 		 updatePoints();
@@ -95,6 +98,8 @@ public class Order implements Gateway{
 		 System.out.println("Date of Delivery : 1-Jan-2014"+ "\tPayment Mode\t : "+paymentMode);
 		 System.out.println("Off on Order\t : "+"Rs."+offOnOrder+"/-"+"\tBill Amount\t: "+"Rs."+billAmount+"/-");
 		 System.out.println("\t\t\t----Thank You!!!-----");
+		 
+		 return billAmount;
 	 }
 	 
 	@Override

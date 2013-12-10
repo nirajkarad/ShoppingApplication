@@ -7,7 +7,7 @@ import com.glam.item.Item;
 public interface Gateway {
 	
 	public boolean makePayment(String id,List<Item> itm,String pay_type);
-	public void makeBill();
+	public float makeBill();
 	
 	
 	
